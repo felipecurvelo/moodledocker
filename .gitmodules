@@ -1,4 +1,4 @@
 [submodule "src"]
 	path = src
-	url = git@github.com:moodle/moodle.git
+	url = git@github.com:felipecurvelo/moodle.git
 	branch = MOODLE_39_STABLE
