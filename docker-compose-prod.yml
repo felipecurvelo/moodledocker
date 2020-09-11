@@ -5,7 +5,7 @@ services:
   web:
     image: nginx:1.17
     ports:
-      - 5001:80
+      - 80:80
     volumes:
       - ./src:/var/www/moodle
       - ./site.conf:/etc/nginx/conf.d/site.conf
@@ -13,23 +13,7 @@ services:
       - php
 
   php:
-    build: .
+    image: gcr.io/unifavela-moodle/moodledocker_php@sha256:8d2618e579c035716be53e966961f167da7aa92ca65b7151e59ce65a0e984bb9
     volumes:
       - ./src:/var/www/moodle
       - ./php.ini:/usr/local/etc/php/php.ini
-    # depends_on:
-    #   - database
-
-#   database:
-#     image: postgres:alpine
-#     ports:
-#       - 5432:5432
-#     environment:
-#       - POSTGRES_USER=moodleuser
-#       - POSTGRES_PASSWORD=123456
-#       - POSTGRES_DB=moodle
-#     volumes:
-#       - database-data:/var/lib/postgresql/data/
-
-# volumes:
-#   database-data:
