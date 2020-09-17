@@ -31,5 +31,10 @@ services:
     volumes:
       - database-data:/var/lib/postgresql/data/
 
+  cron:
+    build: cron/.
+    volumes:
+      - ./src:/var/www
+
 volumes:
   database-data:
