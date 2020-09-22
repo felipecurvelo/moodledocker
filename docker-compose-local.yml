@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   web:
-    image: nginx:1.19
+    image: nginx:1.17
     ports:
       - 80:80
     volumes:
@@ -17,19 +17,19 @@ services:
     volumes:
       - ./moodle:/var/www/moodle
       - ./php.ini:/usr/local/etc/php/php.ini
-    # depends_on:
-    #   - database
+    depends_on:
+      - database
 
-  # database:
-  #   image: postgres:alpine
-  #   ports:
-  #     - 5432:5432
-  #   environment:
-  #     - POSTGRES_USER=moodleuser
-  #     - POSTGRES_PASSWORD=123456
-  #     - POSTGRES_DB=moodle
-  #   volumes:
-  #     - ./database-data:/var/lib/postgresql/data/
+  database:
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=moodleuser
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=moodle
+    volumes:
+      - ./database-data:/var/lib/postgresql/data/
 
   # cron:
   #   build: cron/.
