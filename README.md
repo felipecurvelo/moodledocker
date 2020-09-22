@@ -4,7 +4,7 @@ Code for running a [Moodle](https:/moodle.org/) fresh instance in a docker conta
 
 ## Setting Up
 
-Download the submodule with moodle source code
+Download moodle source code to submodule folder.
 
 ```bash
 git submodule init
@@ -38,7 +38,7 @@ docker run --name moodle_web -p 80:8080 -p 8080:8080 -d felipecurvelo/moodle-ngi
 
 
 ##### Backlog
-- Create an installation guide
+- Create moodle installation guide
 - HTTPS Support
 
 ##### References
