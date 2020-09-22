@@ -1,4 +1,0 @@
-# */1 * * * * root echo "Hello world" >> /var/log/cron.log 2>&1
-# */1 * * * * php /var/www/moodle/admin/cli/cron.php >> /var/log/cron.log 2>&1
- */1 * * * * /usr/bin/curl http://127.0.0.1/admin/cron.php >> /var/log/cron.log 2>&1
-# Don't remove the empty line at the end of this file. It is required to run the cron job
