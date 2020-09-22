@@ -1,6 +1,6 @@
 # Moodle Docker
 
-Code for running a [Moodle](https:/moodle.org/) fresh instance in a docker container.
+Code for running a fresh [Moodle](https:/moodle.org/) instance in a docker container.
 
 ## Setting Up
 
