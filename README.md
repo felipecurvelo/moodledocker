@@ -4,7 +4,7 @@ Code for running a [Moodle](https:/moodle.org/) fresh instance in a docker conta
 
 ## Setting Up
 
-Download moodle source code to submodule folder.
+Download moodle source code to the submodule folder.
 
 ```bash
 git submodule init
